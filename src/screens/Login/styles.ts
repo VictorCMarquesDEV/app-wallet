@@ -1,10 +1,9 @@
 import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
-import { useTheme } from "styled-components";
 
 
 export const Container = styled.View`
-    padding: ${RFValue(10)}px;
+    padding: ${RFValue(20)}px;
 `;
 
 export const ContentHeader = styled.View`
@@ -13,8 +12,12 @@ export const ContentHeader = styled.View`
     padding: ${RFValue(20)}px;
 `;
 
-export const ContentBody = styled.View``;
+export const ContentBody = styled.View`
+    gap: 10px;
+`;
+
 export const ContentFooter = styled.View``;
+
 export const ViewButton = styled.View`
     flex-direction: row;
     gap: ${RFValue(10)}px;
