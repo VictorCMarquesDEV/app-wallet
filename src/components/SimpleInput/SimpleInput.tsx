@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, InputText } from './styles';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components';
-import { TextInputProps } from 'react-native';
+import { TextInputProps, TouchableOpacity } from 'react-native';
 
 interface InputProps {
     RightIcon?: boolean;
@@ -13,13 +13,16 @@ interface InputProps {
     SizeIconRight?: number;
     ColorIconLeft?: string;
     ColorIconRight?: string;
+    secureTextEntry?: boolean;
 }
 
 const SimpleInput: React.FC<InputProps & TextInputProps> = ({
-    LeftIcon, NameIconLeft, RightIcon, NameIconRight, SizeIconLeft, SizeIconRight, ColorIconLeft, ColorIconRight, ...rest
+    LeftIcon, NameIconLeft, RightIcon, NameIconRight, SizeIconLeft, SizeIconRight, ColorIconLeft, ColorIconRight, secureTextEntry, ...rest
 }) => {
 
     const theme = useTheme()
+
+    const [secury, setSecury] = useState(secureTextEntry);
 
     return (
         <Container>
@@ -33,14 +36,18 @@ const SimpleInput: React.FC<InputProps & TextInputProps> = ({
 
             <InputText
                 {...rest}
+                secureTextEntry={secury}
+                underlineColorAndroid='transparent'
             />
 
             {RightIcon && (
-                <Ionicons
-                    name={NameIconRight}
-                    size={SizeIconRight}
-                    color={ColorIconRight || "#000000"}
-                />
+                <TouchableOpacity onPress={() => setSecury(!secury)}>
+                    <Ionicons
+                        name={secury ? 'eye' : 'eye-off'}
+                        size={SizeIconRight}
+                        color={ColorIconRight || "#000000"}
+                    />
+                </TouchableOpacity>
             )}
         </Container>
     );

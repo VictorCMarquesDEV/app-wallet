@@ -35,14 +35,18 @@ const Login: React.FC = () => {
                 <ContentBody>
                     <SimpleInput
                         LeftIcon NameIconLeft={"mail-outline"} SizeIconLeft={30} ColorIconLeft="#4F4F4F"
-                        placeholder="E-mail" placeholderTextColor={"#4F4F4F"} />
+                        placeholder="E-mail" placeholderTextColor={"#4F4F4F"} autoCapitalize="none" 
+                        autoCorrect={false} keyboardType="email-address"/>
                     <SimpleInput
                         LeftIcon NameIconLeft={"lock-closed-outline"} SizeIconLeft={30} ColorIconLeft="#4F4F4F"
-                        RightIcon NameIconRight={"eye-outline"} SizeIconRight={20} ColorIconRight="#4F4F4F"
-                        placeholder="Senha" placeholderTextColor={"#4F4F4F"} />
-                    <TouchableOpacity>
-                        <Button TitleButton="ENTRAR" onPress={() => {}}/>
-                    </TouchableOpacity>
+                        RightIcon NameIconRight={"eye-outline"} SizeIconRight={30} ColorIconRight="#4F4F4F"
+                        placeholder="Senha" placeholderTextColor={"#4F4F4F"} secureTextEntry 
+                        autoCorrect={false} keyboardType="default" autoCapitalize="none"/>
+                    <Button
+                        TitleButton="ENTRAR"
+                        onPress={() => { }}
+                        variant='primary'
+                    />
                 </ContentBody>
 
                 <ContentFooter>

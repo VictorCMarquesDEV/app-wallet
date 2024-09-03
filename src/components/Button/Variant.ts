@@ -1,6 +1,4 @@
-import { useTheme } from "styled-components";
-
-const { COLORS } = useTheme();
+import theme from "../../styles/theme";
 
 interface ButtonStyle {
     button: {
@@ -24,53 +22,53 @@ export interface ButtonVariant {
 const buttonPrimay: ButtonVariant = {
     enabled: {
         button: {
-            backgroundColor: COLORS.PURPLE,
+            backgroundColor: theme.COLORS.PURPLE,
         },
         title: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
         icon: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         }
     },
     disabled: {
         button: {
-            backgroundColor: COLORS.GRAY_100,
+            backgroundColor: theme.COLORS.GRAY_100,
         },
         title: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
         icon: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         }
     }
 }
 
 const buttonSecundary: ButtonVariant = {
     enabled: {
+        title: {
+            color: theme.COLORS.PURPLE,
+        },
+        icon: {
+            color: theme.COLORS.PURPLE,
+        },
         button: {
             backgroundColor: 'transparent',
             borderWidth: 1,
-            borderColor: COLORS.PURPLE,
-        },
-        title: {
-            color: COLORS.PURPLE,
-        },
-        icon: {
-            color: COLORS.PURPLE,
+            borderColor: theme.COLORS.PURPLE,
         }
     },
     disabled: {
         button: {
             backgroundColor: 'transparent',
             borderWidth: 1,
-            borderColor: COLORS.GRAY_100,
+            borderColor: theme.COLORS.GRAY_100,
         },
         title: {
-            color: COLORS.GRAY_100,
+            color: theme.COLORS.GRAY_100,
         },
         icon: {
-            color: COLORS.GRAY_100,
+            color: theme.COLORS.GRAY_100,
         }
     }
 }
@@ -78,24 +76,24 @@ const buttonSecundary: ButtonVariant = {
 const buttonBlack: ButtonVariant = {
     enabled: {
         button: {
-            backgroundColor: COLORS.BLACK,
+            backgroundColor: theme.COLORS.BLACK,
         },
         title: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
         icon: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         }
     },
     disabled: {
         button: {
-            backgroundColor: COLORS.GRAY_100,
+            backgroundColor: theme.COLORS.GRAY_100,
         },
         title: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         },
         icon: {
-            color: COLORS.WHITE,
+            color: theme.COLORS.WHITE,
         }
     }
 }
