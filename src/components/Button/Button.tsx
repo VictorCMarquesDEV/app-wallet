@@ -11,12 +11,13 @@ interface buttonProps {
     iconName?: keyof typeof AntDesign.glyphMap;
     isLoading?: boolean;
     disabled?: boolean;
-    variant?: 'primary' | 'secundary' | 'black';
+    variant?: 'primary' | 'secundary' | 'black' | 'transparent';
     style?: TouchableOpacityProps["style"];
+    colorText?: string
 }
 
 const Button: React.FC<buttonProps> = ({
-    TitleButton, onPress = () => { }, isLoading, iconName, disabled, variant = 'primary', style
+    TitleButton, onPress = () => { }, isLoading, iconName, disabled, variant = 'primary', style, colorText
 }) => {
 
     const theme = useTheme();
@@ -39,13 +40,15 @@ const Button: React.FC<buttonProps> = ({
                             size={20}
                             color={buttonStyle.icon.color}
                             style={{
-
+                                marginRight: 15
                             }}
                         />
                     )}
                 </Content>
             )}
-            <TextButton >{TitleButton}</TextButton>
+            <TextButton 
+                style={[buttonStyle.title, style]}
+            >{TitleButton}</TextButton>
         </Container>
     );
 };

@@ -3,7 +3,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 import Fontisto from '@expo/vector-icons/Fontisto';
 
 export const Button = styled.View`
-    width: ${RFValue(140)}px;
+    width: ${RFValue(120)}px;
     height: ${RFValue(60)}px;
     align-items: center;
     justify-content: center;
