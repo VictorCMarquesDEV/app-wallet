@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Container,
     ContentHeader,
@@ -14,14 +14,25 @@ import {
     ButtonForgotPwd,
     TitleForgotPwd
 } from "./styles";
-import { ButtonSocialGoogle } from "../../components/ButtonSocialGoogle/ButtonSocialGoogle";
+import { ButtonSocialGoogle } from "../../../components/ButtonSocialGoogle/ButtonSocialGoogle";
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { ButtonSocialFacebook } from "../../components/ButtonSocialFacebook/ButtonSocialFacebook";
+import { ButtonSocialFacebook } from "../../../components/ButtonSocialFacebook/ButtonSocialFacebook";
 import { TouchableOpacity, KeyboardAvoidingView } from "react-native";
-import { SimpleInput } from "../../components/SimpleInput/SimpleInput";
-import { Button } from "../../components/Button/Button";
+import { SimpleInput } from "../../../components/SimpleInput/SimpleInput";
+import { Button } from "../../../components/Button/Button";
+import { useNavigation } from "@react-navigation/native";
+import { useTheme } from "styled-components";
 
 const Login: React.FC = () => {
+
+    const { COLORS } = useTheme();
+    const [loading, setLoading] = useState(false);
+    const navigation = useNavigation();
+
+    const handleGoCadastro = () => {
+        navigation.navigate('Cadastro');
+    }
+
     return (
         <SafeAreaView >
             <KeyboardAvoidingView
@@ -67,7 +78,7 @@ const Login: React.FC = () => {
                     </ContentBody>
 
                     <ContentFooter>
-                        <ButtonSignUp onPress={() => { }}>
+                        <ButtonSignUp onPress={handleGoCadastro}>
                             <TitleButtonSignUp>Não possui cadastro?</TitleButtonSignUp>
                             <TitleButtonSignUpLink>Cadastre-se</TitleButtonSignUpLink>
                         </ButtonSignUp>

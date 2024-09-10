@@ -12,10 +12,14 @@ import {
     Poppins_800ExtraBold,
 } from "@expo-google-fonts/poppins";
 
+import { NavigationContainer } from "@react-navigation/native";
+
 import { DMSans_400Regular } from "@expo-google-fonts/dm-sans";
 import { DMSerifDisplay_400Regular } from "@expo-google-fonts/dm-serif-display";
 import COLORS from "../src/styles/theme";
-import { Login } from "./screens/Login/Login";
+import { Login } from "./screens/Auth/Login/Login";
+import { Cadastro } from "./screens/Auth/Cadastro/Cadastro";
+import { Routes } from "./routes";
 
 const App: React.FC = () => {
     const [fontsLoaded] = useFonts({
@@ -34,14 +38,19 @@ const App: React.FC = () => {
 
     return (
         <ThemeProvider theme={COLORS}>
-            <StatusBar
-                style="auto"
-                translucent
-                backgroundColor="transparent"
-            />
-            <View>
-                <Login />
-            </View>
+            <NavigationContainer>
+                <StatusBar
+                    style="dark"
+                    translucent
+                    backgroundColor="transparent"
+                />
+                <View style={{
+                    flex: 1,
+                    backgroundColor: COLORS.COLORS.WHITE,
+                }}>
+                    <Routes />
+                </View>
+            </NavigationContainer>
         </ThemeProvider>
     )
 }
