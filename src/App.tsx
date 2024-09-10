@@ -17,8 +17,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import { DMSans_400Regular } from "@expo-google-fonts/dm-sans";
 import { DMSerifDisplay_400Regular } from "@expo-google-fonts/dm-serif-display";
 import COLORS from "../src/styles/theme";
-import { Login } from "./screens/Auth/Login/Login";
-import { Cadastro } from "./screens/Auth/Cadastro/Cadastro";
 import { Routes } from "./routes";
 
 const App: React.FC = () => {
