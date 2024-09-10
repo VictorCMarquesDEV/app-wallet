@@ -4,11 +4,14 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
     padding: ${RFValue(20)}px;
+    height: 100%;
+    justify-content: center;
 `;
 
 export const ContentHeader = styled.View`
+    width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: ${RFValue(20)}px;
 `;
 
@@ -22,7 +25,6 @@ export const ViewButton = styled.View`
 `;
 
 export const Title = styled.Text`
-    margin-top: ${RFValue(40)}px;
     font-size: ${RFValue(24)}px;
     text-align: center;
     font-family: Poppins_500Medium;

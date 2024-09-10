@@ -66,7 +66,7 @@ const Login: React.FC = () => {
                         <ContentForgotPwd>
                             <Button
                                 TitleButton="Esqueceu a senha?"
-                                onPress={() => { }}
+                                onPress={() => { navigation.navigate('RecuperarSenha') }}
                                 variant='transparent'
                             />
                         </ContentForgotPwd>
