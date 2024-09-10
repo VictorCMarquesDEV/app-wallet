@@ -4,15 +4,8 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
     padding: ${RFValue(20)}px;
+    margin-top: ${RFValue(80)}px;
     height: 100%;
-    justify-content: center;
-`;
-
-export const ContentHeader = styled.View`
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: ${RFValue(20)}px;
 `;
 
 export const ContentBody = styled.View`
