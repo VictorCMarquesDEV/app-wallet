@@ -37,7 +37,16 @@ export const ContentIcon = styled.TouchableOpacity`
     gap: ${RFValue(5)}px;
 `;
 
-export const ViewIcon = styled.View`
+export const ViewIcon = styled.View.attrs({
+    shadowColor: "#000",
+    shadowOffset: {
+        width: 0,
+        height: 1,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 1.00,
+    elevation: 2,
+})`
     width: ${RFValue(50)}px;
     height: ${RFValue(50)}px;
     background-color: #FFFFFF;
