@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, ContentBody, ContentHeader, ContentFooter } from "./styles";
+import { Container, ContentBody, ContentFooter } from "./styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
+import { Header } from "../../../components/Header/Header";
 
 
 const Relatorio = () => {
@@ -17,9 +18,9 @@ const Relatorio = () => {
         <SafeAreaView >
             <Container>
 
-                <ContentHeader>
-
-                </ContentHeader>
+                <Header
+                    appName="Relatórios"
+                />
 
                 <ContentBody>
 

@@ -8,6 +8,7 @@ export const Container = styled.TouchableOpacity`
     border-radius: 8px;
     flex-direction: row;
     align-items: center;
+    margin-bottom: ${RFValue(20)}px;
 `;
 
 export const ContentHeader = styled.View`
