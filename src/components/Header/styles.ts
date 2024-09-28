@@ -1,10 +1,10 @@
 import styled from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize";
 
-export const Container = styled.TouchableOpacity`
+export const Container = styled.View`
     width: 100%;
     height: ${RFValue(60)}px;
-    justify-content: space-between;
+    justify-content: flex-start;
     border-radius: 8px;
     flex-direction: row;
     align-items: center;
@@ -12,6 +12,7 @@ export const Container = styled.TouchableOpacity`
 `;
 
 export const ContentHeader = styled.View`
+    flex: 1;
     flex-direction: column;
     align-items: flex-start;
 `;
@@ -34,4 +35,12 @@ export const Title = styled.Text`
 export const Description = styled.Text`
     font-size: ${RFValue(14)}px;
     font-family: Poppins_300Light;
+`;
+
+export const ViewIcon = styled.TouchableOpacity`
+    width: ${RFValue(40)}px;
+    height: ${RFValue(40)}px;
+    padding: ${RFValue(10)}px;
+    align-items: center;
+    justify-content: center;
 `;

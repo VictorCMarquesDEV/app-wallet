@@ -17,21 +17,32 @@ import {
     DetailsTransaction,
     TitleFlat,
     ViewIconFlat,
+    EllipseOne,
+    EllipseTwo
 } from "./styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Header } from "../../../components/Header/Header";
-import { FontAwesome6, Fontisto, Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome6, Fontisto, MaterialIcons } from "@expo/vector-icons";
 import { transactions } from "../../../utils/transactions";
 import { FlatList, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import ElipseOne from '../../../assets/ellipse1.png';
+import ElipseTwo from '../../../assets/ellipse2.png'
 
 const Carteira = () => {
+
+    const navigation = useNavigation();
+
+    function handleGoCartao() {
+        navigation.navigate('AddCartao' as never)
+    }
 
     return (
 
         <SafeAreaView >
             <Container>
 
-                <Header 
+                <Header
                     appName="Wallet"
                     textLeft
                     nameTextLeft="Ativo"
@@ -39,10 +50,13 @@ const Carteira = () => {
                 />
 
                 <ContentCard>
+                    <EllipseOne source={ElipseOne} />
                     <ViewBalance>
                         <DescriptionCard>Valor total</DescriptionCard>
                         <TitleCard>R$ 1.000,00</TitleCard>
                     </ViewBalance>
+                    
+                    <EllipseTwo source={ElipseTwo} />
                     <ViewBalance>
                         <DescriptionCard>Cartão</DescriptionCard>
                         <TitleCard>Wallet</TitleCard>
@@ -68,11 +82,11 @@ const Carteira = () => {
                         </ViewIcon>
                         <DescriptionButton>Pix</DescriptionButton>
                     </ContentIcon>
-                    <ContentIcon>
+                    <ContentIcon onPress = {handleGoCartao}>
                         <ViewIcon>
-                            <Ionicons name="add-circle-outline" size={30} color="black" />
+                            <MaterialIcons name="payments" size={30} color="black" />
                         </ViewIcon>
-                        <DescriptionButton>Mais</DescriptionButton>
+                        <DescriptionButton>Cartões</DescriptionButton>
                     </ContentIcon>
                 </ContentBody>
 

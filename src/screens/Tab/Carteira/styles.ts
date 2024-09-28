@@ -10,15 +10,15 @@ export const Container = styled.View`
     gap: ${RFValue(10)}px;
 `;
 
-export const ContentCard = styled.View`
+export const ContentCard = styled.ImageBackground`
     width: 100%;
     height: ${RFValue(160)}px;
-    background-color: #9038FF;
+    background-color: #5B259F;
     align-items: center;
     padding-left: ${RFValue(30)}px;
     padding-right: ${RFValue(40)}px;
     justify-content: space-between;
-    border-radius:${RFValue(50)}px;
+    border-radius:${RFValue(40)}px;
     flex-direction: row;
 `;
 
@@ -144,3 +144,14 @@ export const ViewIconFlat = styled.View`
     
 `;
 
+export const EllipseOne = styled.Image`
+    top: 1px;
+    left: 40px;
+    position: absolute;
+`;
+
+export const EllipseTwo = styled.Image`
+    right: 0;
+    bottom: 0;
+    position: absolute;
+`;

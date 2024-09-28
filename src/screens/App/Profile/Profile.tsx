@@ -1,19 +1,13 @@
 import React from "react";
-import { Container, ContentBody, ContentFooter, ContentIcon, TitleCard, ViewIcon } from "./styles";
+import { Avatar, Container, ContentBody, ContentFooter, ContentIcon, TitleCard, ViewIcon, Name, ContentInfo } from "./styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Header } from "../../../components/Header/Header";
 import { SettingsLits } from "../../../components/SettingsList";
-import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native";
 
 
-const Settings = () => {
-
-    const navigation = useNavigation();
-
-    function handleGoProfile() {
-        navigation.navigate('Profile' as never)
-    }
+const Profile = () => {
 
     return (
 
@@ -21,29 +15,31 @@ const Settings = () => {
             <Container>
 
                 <Header
-                    appName="Configurações"
+                    appName="Perfil"
+                    iconLeft
                 />
 
                 <ContentBody>
+                    <Avatar
+                        source={{ uri: 'https://avatars.githubusercontent.com/u/113631460' }}
+                    />
+                    <ContentInfo>
+                        <Name>@dev_vcm</Name>
+                        <TouchableOpacity>
+                            <MaterialIcons name="mode-edit" size={20} color="black" />
+                        </TouchableOpacity>
+                    </ContentInfo>
                     <SettingsLits
                         LeftIcon
                         NameIconLeft="person"
-                        title="Perfil"
-                        RightIcon
-                        NameIconRight="arrow-forward"
-                        onPress={handleGoProfile}
-                    />
-                    <SettingsLits
-                        LeftIcon
-                        NameIconLeft="notifications"
-                        title="Notificações"
+                        title="Contas Conectadas"
                         RightIcon
                         NameIconRight="arrow-forward"
                     />
                     <SettingsLits
                         LeftIcon
-                        NameIconLeft="wallet-outline"
-                        title="Sua Carteira"
+                        NameIconLeft="lock-closed"
+                        title="Privacidade e Segurança"
                         RightIcon
                         NameIconRight="arrow-forward"
                     />
@@ -66,9 +62,9 @@ const Settings = () => {
                 <ContentFooter>
                     <ContentIcon>
                         <ViewIcon>
-                            <MaterialIcons name="logout" size={30} color="white" />
+                            <MaterialIcons name="delete" size={30} color="white" />
                         </ViewIcon>
-                        <TitleCard>Sair</TitleCard>
+                        <TitleCard>Apagar Conta</TitleCard>
                     </ContentIcon>
                 </ContentFooter>
 
@@ -77,4 +73,4 @@ const Settings = () => {
     )
 }
 
-export { Settings }
+export { Profile }

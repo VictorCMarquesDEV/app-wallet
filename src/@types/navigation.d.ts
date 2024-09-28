@@ -4,6 +4,8 @@ export declare global {
             Login: undefined,
             Cadastro: undefined, 
             RecuperarSenha: undefined,
+            Profile: undefined,
+            AddCartao: undefined,
         }
     }
 }
