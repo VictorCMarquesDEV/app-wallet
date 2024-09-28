@@ -101,13 +101,13 @@ const buttonBlack: ButtonVariant = {
 const buttonTransparent: ButtonVariant = {
     enabled: {
         title: {
-            color: theme.COLORS.GRAY3,
+            color: theme.COLORS.PURPLE,
         },
         button: {
             backgroundColor: 'transparent',
         },
         icon: {
-            color: theme.COLORS.GRAY3,
+            color: theme.COLORS.PURPLE,
         }
     },
     disabled: {
@@ -115,10 +115,10 @@ const buttonTransparent: ButtonVariant = {
             backgroundColor: 'transparent',
         },
         title: {
-            color: theme.COLORS.GRAY3,
+            color: theme.COLORS.PURPLE,
         },
         icon: {
-            color: theme.COLORS.GRAY3,
+            color: theme.COLORS.PURPLE,
         }
     }
 }

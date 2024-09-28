@@ -34,7 +34,7 @@ const Carteira = () => {
     const navigation = useNavigation();
 
     function handleGoCartao() {
-        navigation.navigate('AddCartao' as never)
+        navigation.navigate('AddCard' as never)
     }
 
     return (

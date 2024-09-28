@@ -50,12 +50,16 @@ export const Avatar = styled.ImageBackground`
 
 export const Chip = styled.Image`
     position: absolute;
-    top: 50;
-    left: 50;
+    width: 35px;
+    height: 40px;
+    top: 50px;
+    left: 50px;
 `;
 
 export const Bandeira = styled.Image`
     position: absolute;
-    bottom: 50;
-    right: 50;
+    width: 66px;
+    height: 20px;
+    bottom: 50px;
+    right: 50px;
 `;
