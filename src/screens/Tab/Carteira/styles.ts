@@ -75,9 +75,9 @@ export const ViewBalance = styled.View`
 
 export const ContentFooter = styled.View`
     width: 100%;
-    height: max-content;
     align-items: center;
     justify-content: center;
+    height: ${RFValue(200)}px;
 `;
 
 export const TitleCard = styled.Text`
@@ -139,6 +139,7 @@ export const DetailsTransaction = styled.View`
 
 export const Link = styled.Text`
     font-size: ${RFValue(12)}px;
+    padding-top: ${RFValue(8)}px;
     color: #9038FF;
     font-family: Poppins_300Light;
 `;

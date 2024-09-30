@@ -11,22 +11,9 @@ export const Container = styled.View`
 
 export const ContentBody = styled.View`
     width: 100%;
-    align-items: center;
-    justify-content: center;
     flex: 1;
-    gap: 30px;
-`;
-
-export const ContentFooter = styled.View`
-    width: 100%;
-    height: ${RFValue(200)}px;
     align-items: center;
     justify-content: center;
-`;
-
-export const BalanceImg = styled.ImageBackground`
-    width: 100%;
-    height: ${RFValue(215)}px;
 `;
 
 export const ContentFlat = styled.View`
@@ -35,13 +22,6 @@ export const ContentFlat = styled.View`
     justify-content: center;
 `;
 
-export const ContentFlatTop = styled.View`
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: ${RFValue(10)}px;
-`;
 
 export const ContentFlatBottom = styled.View`
     flex-direction: row;
@@ -59,12 +39,6 @@ export const DetailsTransaction = styled.View`
     align-items: flex-start;
 `;
 
-export const Link = styled.Text`
-    font-size: ${RFValue(12)}px;
-    padding-top: ${RFValue(8)}px;
-    color: #9038FF;
-    font-family: Poppins_300Light;
-`;
 
 export const ViewIconFlat = styled.View`
     width: ${RFValue(30)}px;
@@ -82,40 +56,9 @@ export const TitleFlat = styled.Text`
     font-family: Poppins_500Medium;
 `;
 
-export const AmountValue = styled.Text`
-    font-size: ${RFValue(14)}px;
-    color: #FFFFFF;
-    text-align: center;
-    position: absolute;
-    top: 70px;
-    left: 137px;
-    font-family: Poppins_500Medium;
-`;
-
 export const DescriptionButton = styled.Text`
     font-size: ${RFValue(10)}px;
     color: #000000;
     font-family: Poppins_300Light;
 `;
 
-
-export const ViewContent = styled.View`
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-`;
-
-export const TitleAmount = styled.Text`
-    font-size: ${RFValue(16)}px;
-    color: #000000;
-    text-align: center;
-    font-family: Poppins_500Medium;
-    margin-bottom: -10px;
-`;
-
-export const ValueAmount = styled.Text`
-    font-size: ${RFValue(30)}px;
-    color: #9038FF;
-    text-align: center;
-    font-family: Poppins_500Medium;
-`;

@@ -38,6 +38,10 @@ const Carteira = () => {
         navigation.navigate('AddCard' as never)
     }
 
+    function handleGoTransactions() {
+        navigation.navigate('Transactions' as never)
+    }
+
     return (
 
         <SafeAreaView >
@@ -95,7 +99,7 @@ const Carteira = () => {
                 <ContentFooter>
                     <ContentFlatTop>
                         <TitleFlat>Últimas Transações</TitleFlat>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={handleGoTransactions}>
                             <Link>Ver todas</Link>
                         </TouchableOpacity>
                     </ContentFlatTop>
@@ -117,7 +121,6 @@ const Carteira = () => {
                             </ContentFlat>
                         )}
                         contentContainerStyle={{ gap: 5 }}
-                        initialNumToRender={4}
                     />
                 </ContentFooter>
 
