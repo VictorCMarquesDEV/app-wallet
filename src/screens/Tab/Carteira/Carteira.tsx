@@ -1,7 +1,7 @@
 import React from "react";
 import {
     Container,
-    ContentBody,
+    ContentIcons,
     ContentCard,
     ContentFooter,
     ContentIcon,
@@ -18,7 +18,8 @@ import {
     TitleFlat,
     ViewIconFlat,
     EllipseOne,
-    EllipseTwo
+    EllipseTwo,
+    ContentBody
 } from "./styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Header } from "../../../components/Header/Header";
@@ -48,46 +49,47 @@ const Carteira = () => {
                     nameTextLeft="Ativo"
                     iconRight
                 />
-
-                <ContentCard>
-                    <EllipseOne source={ElipseOne} />
-                    <ViewBalance>
-                        <DescriptionCard>Valor total</DescriptionCard>
-                        <TitleCard>R$ 1.000,00</TitleCard>
-                    </ViewBalance>
-                    
-                    <EllipseTwo source={ElipseTwo} />
-                    <ViewBalance>
-                        <DescriptionCard>Cartão</DescriptionCard>
-                        <TitleCard>Wallet</TitleCard>
-                    </ViewBalance>
-                </ContentCard>
-
                 <ContentBody>
-                    <ContentIcon>
-                        <ViewIcon>
-                            <FontAwesome6 name="money-bill-transfer" size={28} color="black" />
-                        </ViewIcon>
-                        <DescriptionButton>Transf.</DescriptionButton>
-                    </ContentIcon>
-                    <ContentIcon>
-                        <ViewIcon>
-                            <MaterialIcons name="payment" size={30} color="black" />
-                        </ViewIcon>
-                        <DescriptionButton>Pagam.</DescriptionButton>
-                    </ContentIcon>
-                    <ContentIcon>
-                        <ViewIcon>
-                            <MaterialIcons name="pix" size={30} color="black" />
-                        </ViewIcon>
-                        <DescriptionButton>Pix</DescriptionButton>
-                    </ContentIcon>
-                    <ContentIcon onPress = {handleGoCartao}>
-                        <ViewIcon>
-                            <MaterialIcons name="payments" size={30} color="black" />
-                        </ViewIcon>
-                        <DescriptionButton>Cartões</DescriptionButton>
-                    </ContentIcon>
+                    <ContentCard>
+                        <EllipseOne source={ElipseOne} />
+                        <ViewBalance>
+                            <DescriptionCard>Valor total</DescriptionCard>
+                            <TitleCard>R$ 1.000,00</TitleCard>
+                        </ViewBalance>
+
+                        <EllipseTwo source={ElipseTwo} />
+                        <ViewBalance>
+                            <DescriptionCard>Cartão</DescriptionCard>
+                            <TitleCard>Wallet</TitleCard>
+                        </ViewBalance>
+                    </ContentCard>
+
+                    <ContentIcons>
+                        <ContentIcon>
+                            <ViewIcon>
+                                <FontAwesome6 name="money-bill-transfer" size={28} color="black" />
+                            </ViewIcon>
+                            <DescriptionButton>Transf.</DescriptionButton>
+                        </ContentIcon>
+                        <ContentIcon>
+                            <ViewIcon>
+                                <MaterialIcons name="payment" size={30} color="black" />
+                            </ViewIcon>
+                            <DescriptionButton>Pagam.</DescriptionButton>
+                        </ContentIcon>
+                        <ContentIcon>
+                            <ViewIcon>
+                                <MaterialIcons name="pix" size={30} color="black" />
+                            </ViewIcon>
+                            <DescriptionButton>Pix</DescriptionButton>
+                        </ContentIcon>
+                        <ContentIcon onPress={handleGoCartao}>
+                            <ViewIcon>
+                                <MaterialIcons name="payments" size={30} color="black" />
+                            </ViewIcon>
+                            <DescriptionButton>Cartões</DescriptionButton>
+                        </ContentIcon>
+                    </ContentIcons>
                 </ContentBody>
 
                 <ContentFooter>

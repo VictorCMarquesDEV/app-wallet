@@ -30,6 +30,8 @@ export const Title = styled.Text`
     color: #000000;
     text-align: center;
     font-family: Poppins_500Medium;
+    padding-top: ${RFValue(6)}px;
+    height: ${RFValue(40)}px;
 `;
 
 export const Description = styled.Text`

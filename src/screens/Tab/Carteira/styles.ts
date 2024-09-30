@@ -24,6 +24,14 @@ export const ContentCard = styled.ImageBackground`
 
 export const ContentBody = styled.View`
     width: 100%;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`;
+
+export const ContentIcons = styled.View`
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;

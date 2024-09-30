@@ -9,10 +9,6 @@ const Notificacao = () => {
 
     const navigation = useNavigation();
 
-    const handleGoLogin = () => {
-        navigation.navigate('Login');
-    }
-
     return (
 
         <SafeAreaView >
