@@ -22,7 +22,6 @@ export const ContentFlat = styled.View`
     justify-content: center;
 `;
 
-
 export const ContentFlatBottom = styled.View`
     flex-direction: row;
     width: 100%;

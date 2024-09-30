@@ -24,7 +24,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Header } from "../../../components/Header/Header";
 import { FontAwesome6, Fontisto, MaterialIcons } from "@expo/vector-icons";
-import { transactions } from "../../../utils/transactions";
+import { transactionsShort } from "../../../utils/transactionsShort";
 import { FlatList, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import ElipseOne from '../../../assets/ellipse1.png';
@@ -105,7 +105,7 @@ const Carteira = () => {
                     </ContentFlatTop>
                     <FlatList
                         showsVerticalScrollIndicator={false}
-                        data={transactions}
+                        data={transactionsShort}
                         renderItem={({ item }) => (
                             <ContentFlat>
                                 <ContentFlatBottom>

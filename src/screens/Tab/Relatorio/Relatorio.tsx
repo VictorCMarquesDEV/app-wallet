@@ -20,13 +20,20 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Header } from "../../../components/Header/Header";
 import BalancePNG from '../../../assets/estatistica.png';
-import { transactions } from "../../../utils/transactions";
+import { transactionsShort } from "../../../utils/transactionsShort";
 import { FlatList } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { Fontisto } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 
 const Relatorio = () => {
+
+    const navigation = useNavigation();
+
+    function handleGoTransactions() {
+        navigation.navigate('Transactions' as never)
+    }
 
     return (
 
@@ -53,13 +60,13 @@ const Relatorio = () => {
                 <ContentFooter>
                     <ContentFlatTop>
                         <TitleFlat>Últimas Transações</TitleFlat>
-                        <TouchableOpacity>
-                            <Link>Mais Recentes</Link>
+                        <TouchableOpacity onPress={handleGoTransactions}>
+                            <Link>Ver todas</Link>
                         </TouchableOpacity>
                     </ContentFlatTop>
                     <FlatList
                         showsVerticalScrollIndicator={false}
-                        data={transactions}
+                        data={transactionsShort}
                         renderItem={({ item }) => (
                             <ContentFlat>
                                 <ContentFlatBottom>
