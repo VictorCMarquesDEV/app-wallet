@@ -6,25 +6,19 @@ import {
     Body,
     TopTitle,
     BodyTitle,
-    ContentFlat,
-    ContentFlatBottom,
-    ViewIconFlat,
-    DetailsTransaction,
-    TitleFlat,
-    DescriptionButton,
 } from "./styles";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useNavigation } from "@react-navigation/native";
 import { Header } from "../../../components/Header/Header";
 import { FlatList } from "react-native";
-import { Fontisto } from "@expo/vector-icons";
-import { transactions } from "../../../utils/transactions";
-import { transactionsShort } from "../../../utils/transactionsShort";
+import { notifications } from "../../../utils/notifications";
+import { new_notifications } from "../../../utils/new_notifications";
+import { useTheme } from "styled-components";
+import { Notifications } from "../../../components/Notifications/Notifications";
 
 
 const Notificacao = () => {
 
-    const navigation = useNavigation();
+    const theme = useTheme();
 
     return (
 
@@ -40,20 +34,17 @@ const Notificacao = () => {
                         <TopTitle>Novas</TopTitle>
                         <FlatList
                             showsVerticalScrollIndicator={false}
-                            data={transactionsShort}
+                            data={new_notifications}
                             renderItem={({ item }) => (
-                                <ContentFlat>
-                                    <ContentFlatBottom>
-                                        <ViewIconFlat>
-                                            <Fontisto name={item.icon} size={30} color="black" />
-                                        </ViewIconFlat>
-                                        <DetailsTransaction>
-                                            <TitleFlat>{item.title}</TitleFlat>
-                                            <DescriptionButton>{item.subtitle}</DescriptionButton>
-                                        </DetailsTransaction>
-                                        <DescriptionButton>R$ {item.price}</DescriptionButton>
-                                    </ContentFlatBottom>
-                                </ContentFlat>
+                                <Notifications
+                                    data={{
+                                        datetime: item.datetime,
+                                        title: item.title,
+                                        entry: item.entry,
+                                        ativo: item.ativo,
+                                        type: item.type,
+                                    }}
+                                />
                             )}
                             contentContainerStyle={{ gap: 5 }}
                         />
@@ -62,20 +53,17 @@ const Notificacao = () => {
                         <BodyTitle>Recentes</BodyTitle>
                         <FlatList
                             showsVerticalScrollIndicator={false}
-                            data={transactions}
+                            data={notifications}
                             renderItem={({ item }) => (
-                                <ContentFlat>
-                                    <ContentFlatBottom>
-                                        <ViewIconFlat>
-                                            <Fontisto name={item.icon} size={30} color="black" />
-                                        </ViewIconFlat>
-                                        <DetailsTransaction>
-                                            <TitleFlat>{item.title}</TitleFlat>
-                                            <DescriptionButton>{item.subtitle}</DescriptionButton>
-                                        </DetailsTransaction>
-                                        <DescriptionButton>R$ {item.price}</DescriptionButton>
-                                    </ContentFlatBottom>
-                                </ContentFlat>
+                                <Notifications
+                                    data={{
+                                        datetime: item.datetime,
+                                        title: item.title,
+                                        entry: item.entry,
+                                        ativo: item.ativo,
+                                        type: item.type,
+                                    }}
+                                />
                             )}
                             contentContainerStyle={{ gap: 5 }}
                         />
